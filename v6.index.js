@@ -20,7 +20,7 @@ var awal = Math.floor(Math.random() * 10);
 var sekend = Math.floor(Math.random() * 10);
 let akhiran = awal + sekend;
 $(document).ready(function(){
-    $('input[id^="konfirmasi"]').each(function(){  $(this).attr("placeholder", awal+'+'+sekend+'=');  });
+    $('input[id^="konfirmasi"]').each(function(){  $(this).attr("placeholder", ' '+awal+' + '+sekend+' =');  });
 });    
 
 function myFunction() {   
