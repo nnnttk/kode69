@@ -30,7 +30,7 @@ function myFunction() {
   var hiburanBnya = '" width="100%" height="700" scrolling="no" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ></iframe>';
   var fblik = '<a href="https://t.me/s/'+userNameTelegram+'"><button style="width:100%;text-align:center;height:50px">Gabung dan dapatkan notif update via telegram</button></a><br />';
   var konf = document.getElementById("konfirmasi").value;
-      document.getElementById("konfirmasi").placeholder = awal+'+'+sekend+'=';
+  var konfigka = document.getElementById("konfirmasi"); konfigka.setAttribute('placeholder', awal+'+'+sekend+'=');
   var Lasli = '<div style="width:100%;overflow:scroll">Jika video lama dimuat, gunakan tautan ini: <a href="'+UriZ+'" rel="nofollow">'+UriZ+'</a></div>';
       if (konf == akhiran)  {   
        document.write(hiburanDnya+UriZ+hiburanBnya+fblik+Lasli);
