@@ -21,6 +21,9 @@ var sekend = Math.floor(Math.random() * 5);
 let akhiran = awal + sekend;
 $(document).ready(function(){
     $('input[id^="konfirmasi"]').each(function(){  $(this).attr("placeholder", ' '+awal+' + '+sekend+' =');  });
+    $('div[id^="pertanyaan"]').each(function(){  
+        document.getElementById("pertanyaan").innerHTML=' '+awal+' + '+sekend+' =';
+    });
 });    
 
 function myFunction() {   
