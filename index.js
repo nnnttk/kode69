@@ -39,8 +39,8 @@ function myFunction() {
   var Lasli = '<div style="width:100%;overflow:scroll">Jika video lama dimuat, gunakan tautan ini: <a href="'+UriZ+'" rel="nofollow">'+UriZ+'</a></div>'+
       '<style>body{margin:0px !important}</style>';
       if (konf == akhiran)  {   
-       document.title = "Selamat Nonton ^_^";
-       document.write(hiburanDnya+UriZ+hiburanBnya+fblik+Lasli);
+       var doctit = '<scr' + 'ipt>document.title = "Selamat Nonton ^_^";</scr' + 'ipt>';
+       document.write(hiburanDnya+UriZ+hiburanBnya+fblik+Lasli+doctit);
       }
       else {
        alert('Akses Ditolak'); window.location="https://twitter.com/"+userNameTwitter;  return false; 
