@@ -27,7 +27,7 @@ $(document).ready(function(){
 });    
 
 function lulus() {
-       sessionStorage.lulus = "y";
+       
 }
     
   var uriD = window.location.href;
@@ -44,7 +44,7 @@ function myFunction() {
   var Lasli = '<div style="width:100%;overflow:scroll">Jika video lama dimuat, gunakan tautan ini: <a href="'+UriZ+'" rel="nofollow">'+UriZ+'</a></div>'+
       '<style>body{margin:0px !important}</style>';
       if (konf == akhiran)  {   
-       lulus();   
+       sessionStorage.lulus = "Jawaban Benar"; var lulus = sessionStorage.getItem("lulus"); console.log(lulus);alert(lulus); 
        var doctit = '<scr' + 'ipt>document.title = "Selamat Nonton ^_^";</scr' + 'ipt>';
        document.write(hiburanDnya+UriZ+hiburanBnya+fblik+Lasli+doctit);
       }
@@ -56,4 +56,4 @@ function myFunction() {
 
 // Lulus Ujian Matematika
 var lulus = sessionStorage.getItem("lulus");
-if (lulus == "y"){alert("Selamat Anda Sudah Lulus Ujian Matematika");window.location=UriZ;}
+if (lulus == "Jawaban Benar"){alert("Selamat Anda Sudah Lulus Ujian Matematika");window.location=UriZ;}
