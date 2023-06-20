@@ -52,4 +52,4 @@ function myFunction() {
 
 // Lulus Ujian Matematika
 var lulus = sessionStorage.getItem("lulus");
-if (lulus == "y"){alert("Selamat Anda Sudah Lulus Ujian Matematika");window.location=UriZ}
+if (lulus == "y"){alert("Selamat Anda Sudah Lulus Ujian Matematika");window.location=UriZ;}
