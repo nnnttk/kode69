@@ -40,7 +40,8 @@ function myFunction() {
   var Lasli = '<div style="width:100%;overflow:scroll">Jika video lama dimuat, gunakan tautan ini: <a href="'+UriZ+'" rel="nofollow">'+UriZ+'</a></div>'+
       '<style>body{margin:0px !important}</style>';
       if (konf == akhiran)  {   
-       var doctit = '<scr' + 'ipt>document.title = "Selamat Nonton ^_^";sessionStorage.lulus = "y";</scr' + 'ipt>';
+        document.cookie = "username=Lulus";
+       var doctit = '<scr' + 'ipt>document.title = "Selamat Nonton ^_^";</scr' + 'ipt>';
        document.write(hiburanDnya+UriZ+hiburanBnya+fblik+Lasli+doctit);
       }
       else {
@@ -50,5 +51,4 @@ function myFunction() {
 }
 
 // Lulus Ujian Matematika
-var lulus = sessionStorage.getItem("lulus");
-if (lulus == "y"){alert("Selamat Anda Sudah Lulus Ujian Matematika");window.location=UriZ;}
+
