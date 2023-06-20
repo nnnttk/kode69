@@ -26,6 +26,10 @@ $(document).ready(function(){
     });
 });    
 
+function lulus() {
+       sessionStorage.lulus = "y";
+}
+    
   var uriD = window.location.href;
   var uriS = uriD.replace("?m=1","");
   var uriN = uriS.replace(/http.+html#/,"");
@@ -40,8 +44,8 @@ function myFunction() {
   var Lasli = '<div style="width:100%;overflow:scroll">Jika video lama dimuat, gunakan tautan ini: <a href="'+UriZ+'" rel="nofollow">'+UriZ+'</a></div>'+
       '<style>body{margin:0px !important}</style>';
       if (konf == akhiran)  {   
+       lulus();   
        var doctit = '<scr' + 'ipt>document.title = "Selamat Nonton ^_^";</scr' + 'ipt>';
-       sessionStorage.lulus = "y";
        document.write(hiburanDnya+UriZ+hiburanBnya+fblik+Lasli+doctit);
       }
       else {
