@@ -25,10 +25,6 @@ $(document).ready(function(){
         document.getElementById("pertanyaan").innerHTML=' '+awal+' + '+sekend+' =';
     });
 });    
-
-function lulus() {
-       
-}
     
   var uriD = window.location.href;
   var uriS = uriD.replace("?m=1","");
