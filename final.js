@@ -25,7 +25,7 @@ $(document).ready(function(){
         document.getElementById("pertanyaan").innerHTML=' '+awal+' + '+sekend+' =';
     });
 });    
-    
+
   var uriD = window.location.href;
   var uriS = uriD.replace("?m=1","");
   var uriN = uriS.replace(/http.+html#/,"");
@@ -40,7 +40,7 @@ function myFunction() {
   var Lasli = '<div style="width:100%;overflow:scroll">Jika video lama dimuat, gunakan tautan ini: <a href="'+UriZ+'" rel="nofollow">'+UriZ+'</a></div>'+
       '<style>body{margin:0px !important}</style>';
       if (konf == akhiran)  {   
-       sessionStorage.lulus = "Jawaban Benar"; var lulus = sessionStorage.getItem("lulus"); console.log(lulus);alert(lulus); 
+        document.cookie = "username=Lulus";
        var doctit = '<scr' + 'ipt>document.title = "Selamat Nonton ^_^";</scr' + 'ipt>';
        document.write(hiburanDnya+UriZ+hiburanBnya+fblik+Lasli+doctit);
       }
@@ -51,5 +51,12 @@ function myFunction() {
 }
 
 // Lulus Ujian Matematika
-var lulus = sessionStorage.getItem("lulus");
-if (lulus == "Jawaban Benar"){alert("Selamat Anda Sudah Lulus Ujian Matematika");window.location=UriZ;}
+if (document.cookie.length != 0) {
+    var array = document.cookie.split("=");
+    var peserta = array[1];
+    var ujian = encodeURIComponent(peserta).replace(/%3B.+/,"");
+    if(ujian=="Lulus"){
+        alert("Anda Sudah Lulus Ujian Matematika");
+        window.location=UriZ;
+    }
+}
