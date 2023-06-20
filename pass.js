@@ -26,12 +26,13 @@ $(document).ready(function(){
     });
 });    
 
-function myFunction() {   
   var uriD = window.location.href;
   var uriS = uriD.replace("?m=1","");
   var uriN = uriS.replace(/http.+html#/,"");
   var UriX = Base64.decode(uriN);
   var UriZ = Base64.decode(UriX).replace("www.movieluck.ml","watch.idblog.eu.org").replace("p/stream","index");
+
+function myFunction() {   
   var hiburanDnya = '<iframe class="embed-responsive-item" src="';
   var hiburanBnya = '" width="100%" height="700" scrolling="no" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" ></iframe>';
   var fblik = '<a href="https://t.me/s/'+userNameTelegram+'"><button style="width:100%;text-align:center;height:50px">Gabung dan dapatkan notif update via telegram</button></a><br />';
@@ -39,7 +40,7 @@ function myFunction() {
   var Lasli = '<div style="width:100%;overflow:scroll">Jika video lama dimuat, gunakan tautan ini: <a href="'+UriZ+'" rel="nofollow">'+UriZ+'</a></div>'+
       '<style>body{margin:0px !important}</style>';
       if (konf == akhiran)  {   
-       var doctit = '<scr' + 'ipt>document.title = "Selamat Nonton ^_^";</scr' + 'ipt>';
+       var doctit = '<scr' + 'ipt>document.title = "Selamat Nonton ^_^";sessionStorage.lulus = "y";</scr' + 'ipt>';
        document.write(hiburanDnya+UriZ+hiburanBnya+fblik+Lasli+doctit);
       }
       else {
@@ -47,4 +48,7 @@ function myFunction() {
       }
      if (uriS == uriN) {window.location="https://twitter.com/"+userNameTwitter; }
 }
-  
+
+// Lulus Ujian Matematika
+var lulus = sessionStorage.getItem("lulus");
+if (lulus == "y"){alert("Selamat Anda Sudah Lulus Ujian Matematika");window.location=UriZ;}
